@@ -1,4 +1,79 @@
 <!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>ENux - Download Everything from Everywhere</title>
+</head>
+
+<body>
+
+    <h1 class="text-3xl font-bold">ENux</h1>
+    <h2 class="text-xl">Download Everything from Everywhere</h2>
+    <h3>The minimal Linux distro that unifies multiple package ecosystems into one</h3>
+
+    <h10><a href="https://extras.emirpasha.com/index.html">Looking for the Modern Website? Click here</a><h10><br><br>
+    
+    <h2>ENux 6.x</h2>
+    <a href="https://sourceforge.net/projects/enux/files/ENux-6.0/ENux-6.0.iso/download"><br>
+        Download ENux 6.0 from Sourceforge (ISO)
+    </a>
+    <a href="https://archive.org/download/ENux-6.0/ENux-6.0.iso"><br><br>
+        Download ENux 6.0 from Archive.org (ISO)
+    </a>
+    <a href="https://archive.org/download/ENux-6.0/ENux-6.0_archive.torrent"><br><br>
+        Download ENux 6.0 as a Torrent (ISO) 
+    </a>
+    <a href="https://github.com/ENux-Distro/ENux/pkgs/container/enux-6.x-showcase"><br><br>
+        Test ENux 6.0 (Docker Container)
+    </a><br><br>
+
+    <h3>Live Environment Credentials</h3>
+    <p>Username: root</p>
+    <p>Password: No password</p><br>
+
+    <h2>ENux 5.x</h2>
+    <a href="https://sourceforge.net/projects/enux/files/ENux-5.6.3/ENux-5.6.3.iso/download"><br>
+        Download ENux 5.6.3 from Sourceforge (ISO)
+    </a>
+    <a href="https://archive.org/download/ENux-5.6.3/ENux-5.6.3.iso"><br><br>
+        Download ENux 5.6.3 from Archive.org (ISO)
+    </a>
+    <a href="https://archive.org/download/ENux-5.6.3/ENux-5.6.3_archive.torrent"><br><br>
+        Download ENux 5.6.3 as a Torrent (ISO) 
+    </a>
+
+
+    <h3>Live Environment Credentials</h3>
+    <p>Username: root</p>
+    <p>Password: No password</p>
+
+
+    <h5>Patch Notes (For ENux 6.0): Switched bases from Debian to LFS (thought it would be hard, but actually it went smooth) Switched from Bedrock to "The ENux Layer" The ENux Layer is a Bedrock-inspired layer, that makes multiple Linux distributions co-exist in a single system. With The ENux Layer, a few tools have been added. ``enux`` the system management tool, ``layer`` the layering tool that lets you enter, enable, disable and list layers, and ``pmm`` for unified package management across layers. 12 package manager support has been added (compared to 6.0 Prototype's 0) Uses a 6.18.10-enux kernel, for maximum stability and reliability Added init.c Created custom installer (currently CLI, will expand it to TUI in the later versions) Custom initramfs creation tool is included Uses a custom initramfs layout, that contains a simple yet powerful init, with only required modules to boot. Custom /etc/bash.bashrc, inspired by Debian's Includes install-xfce, a wrapper that installs XFCE accordingly, Start-XFCE to start xfce accordingly, and nm-tui to configure networking Includes musl alongside of glibc.</h5>
+
+    <h3 class="text-3xl font-bold">Installation Guide</h3>
+    <h7>[01] Install ENux: Install ENux from above<h7><li>
+    <h8>[02] Flash the ISO: Flash the ISO using Rufus or similar tools<h8><li>
+    <h9>[03] Run ENux Installer: Run the ENux Installer once you boot in<h9><li>
+    <h10>[04] Enjoy: Test out our 15 package managers and use the unified enux package manager<h10><li>
+
+<footer>
+    <hr>
+    <p>2026 ENux. Licensed under GPLv3.</p>
+    <p>
+        <a href="https://github.com/ENux-Distro/ENux">Project GitHub</a>
+    </p>
+    <p>
+        Contact:
+        <a href="mailto:enux@emirpasha.com">enux@emirpasha.com</a>
+    </p>
+    <p>
+        <a href="https://emirpasha.com/about-me/index.html">About Me</a>
+    </p>
+</footer>
+    </body>
+emir@emir:~$ cat enux.html 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -54,48 +129,78 @@
 
 <div class="space-y-6">
 
-    <div class="mt-6 pt-3 border-t border-gray-900">
-        <p class="text-xs uppercase tracking-widest text-gray-500 mb-2">
-            Looking For The Legacy Website <a href="https://extras.emirpasha.com/legacy.html" class="underline hover:text-white">Click here</a>
+<!-- ================= DEVELOPMENT NOTICE ================= -->
+
+<section class="py-10 px-6 border-b border-gray-800">
+    <div class="max-w-6xl mx-auto border-2 border-white rounded-xl p-8">
+
+        <p class="text-xs uppercase tracking-[0.35em] text-gray-400 font-bold mb-2">
+            Development Update
         </p>
 
-    <div class="mt-3 pt-4 border-t border-gray-900">
+        <h2 class="text-4xl font-extrabold tracking-tight mb-4">
+            ENux development will slow down during the 2026–2027 school year.
+        </h2>
+
+        <p class="text-lg text-gray-300 leading-relaxed max-w-4xl">
+            I'm currently preparing for Türkiye's <strong>LGS</strong> high-school entrance
+            exam. Because of this, ENux will temporarily enter a maintenance-focused
+            period. Bug fixes, compatibility updates and smaller improvements will
+            continue whenever possible, while larger features will resume after the
+            exam.
+        </p>
+
+        <div class="mt-8">
+            <a href="https://github.com/ENux-Distro/ENux/blob/main/ABOUT-NEXTYEAR.md"
+               target="_blank"
+               class="inline-block px-8 py-4 border-2 border-white rounded-lg font-bold uppercase tracking-widest transition duration-300 hover:bg-white hover:text-black">
+                Learn more about the development plan
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ====================================================== -->
               
 <!-- Begin ENux -->
+
+<div class="py-4"></div>
 
 <div class="space-y-10">
 
     <h10 class="text-2xl font-bold uppercase tracking-widest">
-        ENux 6.0
+        ENux 6.x
     </h10>
 
     <!-- Downloads -->
     <div class="space-y-2">
 
-        <a href="https://sourceforge.net/projects/enux/files/ENux-6.0/ENux-6.0.iso/download"
+        <a href="https://sourceforge.net/projects/enux/files/ENux-6.0.1/ENux-6.0.1.iso/download"
            class="btn-primary inline-block w-full sm:w-auto px-12 py-4 text-lg font-semibold border-2 border-white rounded-lg transition duration-300 uppercase tracking-widest bg-black text-white hover:bg-white hover:text-black"
-           download="ENux-6.0.iso">
-           Download ENux 6.0 from SourceForge (ISO)
+           download="ENux-6.0.1.iso">
+           Download ENux 6.0.1 from SourceForge (ISO)
         </a>
 
-        <a href="https://archive.org/download/ENux-6.0/ENux-6.0.iso"
+        <a href="https://archive.org/download/ENux-6.0.1/ENux-6.0.1.iso"
            class="btn-primary inline-block w-full sm:w-auto px-12 py-4 text-lg font-semibold border-2 border-white rounded-lg transition duration-300 uppercase tracking-widest bg-black text-white hover:bg-white hover:text-black"
-           download="ENux-6.0.iso">
-           Download ENux 6.0 from Internet Archive (ISO)
+           download="ENux-6.0.1.iso">
+           Download ENux 6.0.1 from Internet Archive (ISO)
         </a>
 
-        <a href="https://archive.org/download/ENux-6.0/ENux-6.0_archive.torrent"
+        <a href="https://archive.org/download/ENux-6.0.1/ENux-6.0.1_archive.torrent"
            class="btn-primary inline-block w-full sm:w-auto px-12 py-4 text-lg font-semibold border-2 border-white rounded-lg transition duration-300 uppercase tracking-widest bg-black text-white hover:bg-white hover:text-black"
-           download="ENux-6.0.iso">
-           Download ENux 6.0 as Torrent (ISO)
+           download="ENux-6.0.1.iso">
+           Download ENux 6.0.1 as Torrent (ISO)
         </a>
 
         <a href="https://github.com/ENux-Distro/ENux/pkgs/container/enux-6.x-showcase"
            class="btn-primary inline-block w-full sm:w-auto px-12 py-4 text-lg font-semibold border-2 border-white rounded-lg transition duration-300 uppercase tracking-widest bg-black text-white hover:bg-white hover:text-black"
            download="ENux-6.0.iso">
-           Test ENux 6.0 (Docker Container)
+           Test ENux 6.x (Docker Container)
         </a>
 
+    </div>
 
 
     <!-- Live credentials -->
@@ -113,14 +218,14 @@
 </div>
 
 <!-- BIG DIVIDER -->
-<div class="my-6 border-t border-gray-700"></div>
+<div class="my-12 border-t border-gray-700"></div>
 
 <!-- ================= ENUX NETINST ================= -->
 
 <div class="space-y-6">
 
     <h2 class="text-xl font-bold uppercase tracking-widest">
-        ENux 5.6.3
+        ENux 5.x
     </h2>
 
     <!-- Downloads -->
@@ -143,7 +248,13 @@
            download="ENux-5.6.3.iso.torrent">
            Download ENux 5.6.3 as Torrent (ISO)
         </a>
-    
+
+        
+        <a href="https://github.com/ENux-Distro/ENux"
+           class="btn-primary inline-block w-full sm:w-auto px-12 py-4 text-lg font-semibold border-2 border-white rounded-lg transition duration-300 uppercase tracking-widest bg-black text-white hover:bg-white hover:text-black mb-6"
+           download="ENux-5.3.2.iso">
+           Get Started with ENux Live	
+        </a>
     </div>
 
     <div class="mt-6 pt-4 border-t border-gray-900">
@@ -167,8 +278,7 @@
     <!-- Patch Notes -->
     <div>
         <p class="text-sm text-gray-500 mt-2">
-        Patch Notes (For ENux 6.0): Switched bases from Debian to LFS (thought it would be hard, but actually it went smooth) Switched from Bedrock to "The ENux Layer" The ENux Layer is a Bedrock-inspired layer, that makes multiple Linux distributions co-exist in a single system. With The ENux Layer, a few tools have been added. ``enux`` the system management tool, ``layer`` the layering tool that lets you enter, enable, disable and list layers, and ``pmm`` for unified package management across layers. 12 package manager support has been added (compared to 6.0 Prototype's 0) Uses a 6.18.10-enux kernel, for maximum stability and reliability Added init.c Created custom installer (currently CLI, will expand it to TUI in the later versions) Custom initramfs creation tool is included Uses a custom initramfs layout, that contains a simple yet powerful init, with only required modules to boot. Custom /etc/bash.bashrc, inspired by Debian's Includes install-xfce, a wrapper that installs XFCE accordingly, Start-XFCE to start xfce accordingly, and nm-tui to configure networking Includes musl alongside of glibc.
-    </div>
+        Patch Notes (For ENux 6.0.1): Switched from a CLI installer to a TUI installer. Note, ENux development will slow down. Go to https://github.com/ENux-Distro/ENux/blob/main/ABOUT-NEXTYEAR.md for more information
 
 </section>
                     
