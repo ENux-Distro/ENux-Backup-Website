@@ -1,0 +1,974 @@
+/* =============================================================
+   RESET
+============================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #000;
+    color: #fff;
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+button {
+    font: inherit;
+}
+
+
+/* =============================================================
+   GLOBAL
+============================================================= */
+
+:root {
+    --background: #000;
+    --foreground: #fff;
+    --muted: #999;
+    --subtle: #666;
+    --border: #292929;
+    --border-light: #444;
+    --panel: #080808;
+
+    --max-width: 1100px;
+}
+
+.container {
+    width: min(
+        calc(100% - 40px),
+        var(--max-width)
+    );
+
+    margin-inline: auto;
+}
+
+.section {
+    padding: 110px 0;
+}
+
+.section-dark {
+    background: #050505;
+}
+
+p {
+    color: #c7c7c7;
+    margin-top: 0;
+}
+
+.lead {
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+strong {
+    color: #fff;
+}
+
+
+/* =============================================================
+   HEADER
+============================================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    border-bottom: 1px solid var(--border);
+
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(10px);
+}
+
+.header-inner {
+    min-height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.site-logo {
+    text-decoration: none;
+
+    font-weight: 800;
+    letter-spacing: 0.16em;
+}
+
+.site-nav {
+    display: flex;
+    gap: 18px;
+}
+
+.site-nav a {
+    color: var(--muted);
+    text-decoration: none;
+
+    font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+    font-size: 0.8rem;
+}
+
+.site-nav a:hover {
+    color: #fff;
+}
+
+
+/* =============================================================
+   HERO
+============================================================= */
+
+.hero {
+    min-height: 80vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 0;
+}
+
+.eyebrow {
+    margin-bottom: 18px;
+
+    color: var(--muted);
+
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+}
+
+.hero h1 {
+    margin: 0;
+
+    font-size: clamp(4rem, 13vw, 9rem);
+    line-height: 0.85;
+    letter-spacing: -0.07em;
+    font-weight: 900;
+}
+
+.hero-meta {
+    margin-top: 35px;
+
+    color: #aaa;
+
+    font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+    letter-spacing: 0.15em;
+    font-size: 0.9rem;
+}
+
+.hero-line {
+    width: 100%;
+    height: 1px;
+
+    margin: 35px 0;
+    background: var(--border);
+}
+
+.hero-intro {
+    max-width: 600px;
+
+    color: #fff;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+}
+
+
+/* =============================================================
+   SECTION HEADINGS
+============================================================= */
+
+.section-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+
+    margin-bottom: 60px;
+
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+}
+
+.section-number {
+    color: var(--subtle);
+
+    font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+    font-size: 0.8rem;
+}
+
+.section-heading h2 {
+    margin: 0;
+
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    letter-spacing: -0.04em;
+}
+
+
+/* =============================================================
+   ABOUT
+============================================================= */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 80px;
+}
+
+.about-main p {
+    max-width: 680px;
+}
+
+.info-block {
+    border-top: 1px solid var(--border);
+}
+
+.info-row {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.info-row span {
+    color: var(--subtle);
+
+    font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+}
+
+
+/* =============================================================
+   SKILLS
+============================================================= */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+
+    background: var(--border);
+    border: 1px solid var(--border);
+}
+
+.skill-block {
+    padding: 35px;
+
+    background: var(--panel);
+}
+
+.skill-wide {
+    grid-column: 1 / -1;
+}
+
+.block-label {
+    margin-bottom: 25px;
+
+    color: var(--subtle);
+
+    font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+}
+
+.skill-list {
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+.skill-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.skill-list li:last-child {
+    border-bottom: 0;
+}
+
+.skill-list span {
+    color: var(--muted);
+    text-align: right;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+.tag-list li {
+    padding: 8px 12px;
+
+    border: 1px solid var(--border-light);
+
+    color: #ddd;
+
+    font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+    font-size: 0.8rem;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+
+    background: var(--border);
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    padding: 25px;
+
+    background: #000;
+}
+
+.project-item span {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+
+/* =============================================================
+   PIANO
+============================================================= */
+
+.piano-intro {
+    max-width: 750px;
+    margin-bottom: 80px;
+}
+
+.timeline {
+    border-top: 1px solid var(--border);
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 30px;
+
+    padding: 35px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.timeline-marker {
+    color: var(--subtle);
+
+    font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+}
+
+.timeline-item h3 {
+    margin: 0 0 10px;
+
+    font-size: 1.6rem;
+}
+
+.media-section {
+    margin-top: 100px;
+}
+
+.subheading {
+    margin-bottom: 25px;
+
+    color: var(--subtle);
+
+    font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+}
+
+.recordings {
+    border-top: 1px solid var(--border);
+}
+
+.recording {
+    padding: 25px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.recording-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+.recording-number {
+    color: var(--subtle);
+
+    font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+}
+
+.recording h3 {
+    margin: 0;
+}
+
+.recording p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.recording audio {
+    width: 100%;
+}
+
+
+/* =============================================================
+   ENUX
+============================================================= */
+
+.enux-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.enux-title {
+    max-width: 650px;
+
+    margin: 0 0 25px;
+
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+}
+
+.button {
+    display: inline-block;
+
+    margin-top: 25px;
+    padding: 13px 20px;
+
+    border: 1px solid #fff;
+
+    background: #fff;
+    color: #000;
+
+    text-decoration: none;
+
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.button:hover {
+    background: #000;
+    color: #fff;
+}
+
+
+/* =============================================================
+   TERMINAL
+============================================================= */
+
+.terminal {
+    border: 1px solid var(--border-light);
+
+    background: #000;
+
+    font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+}
+
+.terminal-header {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 12px 15px;
+
+    border-bottom: 1px solid var(--border);
+
+    color: var(--muted);
+
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+}
+
+.terminal-body {
+    padding: 25px;
+
+    color: #bbb;
+
+    font-size: 0.85rem;
+    overflow-x: auto;
+}
+
+.terminal-body p {
+    margin: 0;
+
+    font-family: inherit;
+}
+
+.prompt {
+    color: #fff;
+}
+
+
+/* =============================================================
+   COMMAND EXPLORER
+============================================================= */
+
+.commands-hero {
+    max-width: 700px;
+    margin-bottom: 60px;
+}
+
+.command-kicker {
+    margin-bottom: 10px;
+
+    font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-weight: 800;
+}
+
+.version-selector {
+    display: flex;
+
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 45px;
+}
+
+.version-button {
+    padding: 15px 25px;
+
+    border: 0;
+    border-bottom: 2px solid transparent;
+
+    background: transparent;
+    color: var(--muted);
+
+    cursor: pointer;
+
+    font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+    font-size: 0.8rem;
+}
+
+.version-button:hover {
+    color: #fff;
+}
+
+.version-button.active {
+    border-bottom-color: #fff;
+    color: #fff;
+}
+
+.command-version {
+    display: none;
+}
+
+.command-version.active {
+    display: block;
+}
+
+.version-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    margin-bottom: 25px;
+}
+
+.version-heading > span {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.version-heading small {
+    color: var(--subtle);
+
+    font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+    font-size: 0.65rem;
+}
+
+.command-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+
+    background: var(--border);
+    border: 1px solid var(--border);
+}
+
+.command-card {
+    padding: 30px;
+
+    background: #050505;
+}
+
+.command-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.command-prefix {
+    color: var(--subtle);
+
+    font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+}
+
+.command-header h3 {
+    margin: 0;
+
+    font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+    font-size: 1.1rem;
+}
+
+.command-card p {
+    min-height: 75px;
+    color: var(--muted);
+}
+
+.command-expand {
+    padding: 0;
+
+    border: 0;
+
+    background: none;
+    color: #fff;
+
+    cursor: pointer;
+
+    font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+}
+
+.command-expand:hover {
+    text-decoration: underline;
+}
+
+.command-output {
+    display: none;
+
+    margin-top: 25px;
+
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+}
+
+.command-card.open .command-output {
+    display: block;
+}
+
+.command-output pre {
+    margin: 0;
+
+    overflow-x: auto;
+
+    color: #bbb;
+
+    font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+    font-size: 0.75rem;
+}
+
+
+/* =============================================================
+   LINKS
+============================================================= */
+
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+
+    background: var(--border);
+    border: 1px solid var(--border);
+}
+
+.link-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 30px;
+
+    background: #000;
+
+    text-decoration: none;
+}
+
+.link-card:hover {
+    background: #111;
+}
+
+.link-card strong {
+    font-size: 1.5rem;
+}
+
+
+/* =============================================================
+   FOOTER
+============================================================= */
+
+.site-footer {
+    border-top: 1px solid var(--border);
+
+    padding: 50px 0;
+
+    color: var(--muted);
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.footer-inner p {
+    margin: 5px 0;
+
+    color: var(--subtle);
+
+    font-size: 0.8rem;
+}
+
+
+/* =============================================================
+   MOBILE
+============================================================= */
+
+@media (max-width: 800px) {
+
+    .site-nav {
+        display: none;
+    }
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .about-grid,
+    .enux-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-wide {
+        grid-column: auto;
+    }
+
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+
+    .command-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .version-heading {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .links-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 520px) {
+
+    .container {
+        width: min(
+            calc(100% - 28px),
+            var(--max-width)
+        );
+    }
+
+    .hero {
+        min-height: 70vh;
+        padding: 90px 0;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.5rem, 18vw, 6rem);
+    }
+
+    .section-heading {
+        gap: 12px;
+    }
+
+    .section-heading h2 {
+        font-size: 1.7rem;
+    }
+
+    .skill-block,
+    .command-card {
+        padding: 25px 20px;
+    }
+
+    .skill-list li {
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .skill-list span {
+        text-align: left;
+    }
+
+    .timeline-item {
+        grid-template-columns: 40px 1fr;
+        gap: 15px;
+    }
+
+}
